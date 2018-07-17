@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.newbie.tb_parkir">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_parkir1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_parkir1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Dashboard" />
+        <activity
+            android:name=".Masuk"
+            android:label="Data Kendaraan Masuk"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dashboard" />
+        </activity>
+        <activity
+            android:name=".Keluar"
+            android:label="Data Kendaraan Keluar"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dashboard" />
+        </activity>
+        <activity android:name=".MasukTambah" />
+        <activity android:name=".MasukEdit"></activity>
+    </application>
+
+</manifest>
